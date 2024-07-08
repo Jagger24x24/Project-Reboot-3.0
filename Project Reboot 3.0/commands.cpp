@@ -158,7 +158,7 @@ void ServerCheatHook(AFortPlayerControllerAthena* PlayerController, FString Msg)
 
 			// LOG_INFO(LogDev, "weaponName: {}", weaponName);
 
-			auto WID = Cast<UFortWorldItemDefinition>(FindObject(weaponName, nullptr, ANY_PACKAGE));
+			auto WID = Cast<UFortWorldItemDefinition>(LoadObject(weaponName, UFortWorldItemDefinition::StaticClass()));
 
 			if (!WID)
 			{
